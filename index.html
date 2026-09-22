@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pokédex</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header class="entete">
+        <div class="conteneur">
+            <p class="sous-titre">Attrapez-les tous !</p>
+
+            <div class="titre-favoris">
+                <h1>Pokédex</h1>
+
+                <div class="compteur-favoris">
+                    Favoris :
+                    <span id="nombre-favoris">0</span>
+                </div>
+            </div>
+
+            <p>
+                Découvre les Pokémon de la première génération et conserve tes préférés.
+            </p>
+        </div>
+    </header>
+
+    <main class="conteneur">
+        <section class="outils">
+            <div class="groupe-champ">
+                <label for="recherche">Rechercher un Pokémon</label>
+
+                <input type="search" id="recherche" placeholder="Exemple : Pikachu">
+            </div>
+
+            <div class="groupe-champ">
+                <label for="filtre-type">Filtrer par type</label>
+
+                <select id="filtre-type">
+                    <option value="tous">Tous les types</option>
+                </select>
+            </div>
+        </section>
+
+        <p id="message-resultat" class="message-resultat"></p>
+
+        <section id="liste-pokemon" class="liste-pokemon" aria-label="Liste des Pokémon">
+            <p>Chargement des Pokémon...</p>
+        </section>
+    </main>
+    <div id="fenetre-details" class="fenetre-details cachee">
+        <div class="contenu-details">
+            <button id="fermer-details" class="fermer-details" type="button" aria-label="Fermer les détails">
+                ×
+            </button>
+
+            <div id="informations-pokemon"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Projet Pokédex réalisé avec la PokéAPI.</p>
+    </footer>
+</body>
+
+</html>
