@@ -1,3 +1,4 @@
+/* Regles generales appliquees a toute la page. */
 * {
     box-sizing: border-box;
 }
@@ -14,6 +15,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Les champs et les boutons utilisent la meme police que le reste de la page. */
 button,
 input,
 select {
@@ -26,6 +28,7 @@ select {
     margin: 0 auto;
 }
 
+/* En-tete rouge avec le titre du Pokedex et le compteur de favoris. */
 .entete {
     padding: 48px 0;
     background: linear-gradient(135deg, #dc2638, #ef5261);
@@ -69,12 +72,14 @@ select {
     box-shadow: 0 4px 10px rgba(32, 36, 44, 0.18);
 }
 
+/* Espacement principal de la page. */
 main {
     min-height: 500px;
     padding-top: 36px;
     padding-bottom: 60px;
 }
 
+/* Zone qui contient la recherche et le filtre par type. */
 .outils {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -103,6 +108,7 @@ main {
     font-weight: bold;
 }
 
+/* Grille qui accueille les cartes des Pokemon. */
 .liste-pokemon {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -110,7 +116,7 @@ main {
     margin-top: 30px;
 }
 
-
+/* Pied de page. */
 footer {
     padding: 24px;
     background-color: #20242c;
@@ -122,12 +128,14 @@ footer p {
     margin: 0;
 }
 
+/* Sur une tablette, deux cartes sont affichees par ligne. */
 @media (max-width: 850px) {
     .liste-pokemon {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
+/* Sur un petit ecran, les elements sont places les uns sous les autres. */
 @media (max-width: 650px) {
     .entete {
         padding: 32px 0;
@@ -151,6 +159,7 @@ footer p {
     }
 }
 
+/* Apparence d'une carte Pokemon. */
 .carte-pokemon {
     position: relative;
     padding: 20px;
@@ -192,6 +201,7 @@ footer p {
     text-transform: capitalize;
 }
 
+/* Badges qui indiquent le ou les types du Pokemon. */
 .liste-types {
     display: flex;
     justify-content: center;
@@ -208,6 +218,7 @@ footer p {
     text-transform: capitalize;
 }
 
+/* Bouton permettant d'ajouter ou de retirer un favori. */
 .bouton-favori {
     position: absolute;
     top: 14px;
@@ -227,6 +238,7 @@ footer p {
     background-color: #ffe3e6;
 }
 
+/* Une couleur differente est utilisee pour chaque type de Pokemon. */
 .type-normal {
     background-color: #929da3;
 }
@@ -299,7 +311,7 @@ footer p {
     background-color: #db75b6;
 }
 
-
+/* Fenetre qui apparait quand on clique sur une carte. */
 .fenetre-details {
     position: fixed;
     z-index: 1000;
@@ -315,6 +327,7 @@ footer p {
     display: none;
 }
 
+/* Contenu blanc de la fenetre de details. */
 .contenu-details {
     position: relative;
     width: 100%;
@@ -341,6 +354,7 @@ footer p {
     cursor: pointer;
 }
 
+/* Organisation de l'image et des informations principales. */
 .entete-details {
     display: flex;
     align-items: center;
@@ -371,6 +385,7 @@ footer p {
     border-radius: 10px;
 }
 
+/* Mise en forme des statistiques et de leurs barres de progression. */
 .statistique {
     display: grid;
     grid-template-columns: 130px 1fr 40px;
@@ -397,7 +412,7 @@ footer p {
     border-radius: 50px;
 }
 
-
+/* Messages affiches pendant le chargement ou en cas de recherche vide. */
 .message-erreur,
 .message-vide {
     grid-column: 1 / -1;
@@ -408,6 +423,7 @@ footer p {
     box-shadow: 0 8px 25px rgba(32, 36, 44, 0.08);
 }
 
+/* Adaptation de la fenetre de details pour les telephones. */
 @media (max-width: 650px) {
     .entete-details {
         flex-direction: column;
